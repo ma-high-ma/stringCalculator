@@ -91,4 +91,28 @@ public class StringCalculatorTest {
 
     }
 
+    @Test
+    public void delimeterWithFlexibleLength() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        assertEquals(6,s.Add("//[**]\n1**2**3"));
+
+    }
+
+    @Test
+    public void twoDelimeterWithFlexibleLength() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        assertEquals(6,s.Add("//[***][@@@]\n1@@@2***3"));
+
+    }
+
+    @Test
+    public void multipleDelimeterWithFlexibleLength() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        assertEquals(10,s.Add("//[***][@@@][+++]\n1@@@2***3+++4"));
+
+    }
+
 }

@@ -5,7 +5,7 @@ public class StringCalculator {
 
     public int Add(String numbers) throws Exception{
 
-        String delimiter;
+        String regex = "";
 
         if (numbers.length() > 0) {
 
@@ -13,16 +13,22 @@ public class StringCalculator {
             if (numbers.charAt(0) == '/' && numbers.charAt(1) == '/') {
 
                 String[] splitNumbers = numbers.split("\\n",2);
-                delimiter = "\\"+splitNumbers[0].substring(2, splitNumbers[0].length());
-//                System.out.println("deli = "+delimiter);
-//                System.out.println("string sent = "+splitNumbers[1]);
-                return computeSum(splitNumbers[1], delimiter);
+
+                String[] multipleDelimiters = splitNumbers[0].substring(2, splitNumbers[0].length()).split("\\[|\\]");
+                for (String a : multipleDelimiters) {
+                    if (!a.isEmpty()) {
+                        regex += "[\\"+a+"]|";
+                    }
+
+                }
+                regex = regex.substring(0,regex.length()-1);
+                return computeSum(splitNumbers[1], regex);
 
             }
             else {
 
-                delimiter = ",|\\n";
-                return computeSum(numbers, delimiter);
+                regex = ",|\\n";
+                return computeSum(numbers, regex);
 
             }
 
@@ -36,9 +42,11 @@ public class StringCalculator {
         int integer, flag = 0;
         String negatives = "";
         String[] splitNumbers = str.split(delimiter);
-//        System.out.println("split = "+splitNumbers[0]);
         int sum = 0;
         for (String a : splitNumbers) {
+            if(a.isEmpty()){
+                continue;
+            }
             integer = Integer.parseInt(a.trim());
             if (integer < 0) {
 
