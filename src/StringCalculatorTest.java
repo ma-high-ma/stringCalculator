@@ -67,4 +67,20 @@ public class StringCalculatorTest {
 
     }
 
+    @Test
+    public void negativeInteger() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        try
+        {
+            s.Add("1,-2,3, -4");
+            assert false;
+        }
+        catch (Exception e)
+        {
+            assertEquals("Negatives not allowed: -2 -4 ",e.getMessage());
+        }
+
+    }
+
 }

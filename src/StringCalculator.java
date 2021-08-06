@@ -3,7 +3,7 @@
  */
 public class StringCalculator {
 
-    public int Add(String numbers) {
+    public int Add(String numbers) throws Exception{
 
         String delimiter;
 
@@ -31,13 +31,23 @@ public class StringCalculator {
         return 0;
     }
 
-    private int computeSum(String str, String delimiter) {
+    private int computeSum(String str, String delimiter) throws Exception{
 
+        int integer, flag = 0;
+        String negatives = "";
         String[] splitNumbers = str.split(delimiter);
 //        System.out.println("split = "+splitNumbers[0]);
         int sum = 0;
         for (String a : splitNumbers) {
-            sum += Integer.parseInt(a.trim());
+            integer = Integer.parseInt(a.trim());
+            if (integer < 0) {
+                flag = 1;
+                negatives += integer + " ";
+            }
+            sum += integer;
+        }
+        if (flag == 1) {
+            throw new Exception("Negatives not allowed: "+negatives);
         }
         return sum;
     }
