@@ -19,4 +19,28 @@ public class StringCalculatorTest {
 
     }
 
+    @Test
+    public void singleNumber() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        assertEquals(1,s.Add("1"));
+
+    }
+
+    @Test
+    public void twoNumbers() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        assertEquals(3,s.Add("1,2"));
+
+    }
+
+    @Test
+    public void numberWithComma() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        assertEquals(4,s.Add("4,"));
+
+    }
+
 }
