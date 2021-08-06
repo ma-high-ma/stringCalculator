@@ -41,8 +41,13 @@ public class StringCalculator {
         for (String a : splitNumbers) {
             integer = Integer.parseInt(a.trim());
             if (integer < 0) {
+
                 flag = 1;
                 negatives += integer + " ";
+
+            }
+            else if (integer > 1000) {
+                integer = 0;
             }
             sum += integer;
         }

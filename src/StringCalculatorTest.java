@@ -83,4 +83,12 @@ public class StringCalculatorTest {
 
     }
 
+    @Test
+    public void numbersGreaterThan1000() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        assertEquals(2,s.Add("1001,2, 100000"));
+
+    }
+
 }
