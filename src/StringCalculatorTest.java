@@ -115,4 +115,20 @@ public class StringCalculatorTest {
 
     }
 
+    @Test
+    public void delimitersWithoutParenthesis() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        assertEquals(11,s.Add("//**\n1**2**8"));
+
+    }
+
+    @Test
+    public void multipleDelimitersWithNumberGreaterThan1000() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        assertEquals(11,s.Add("//[**][>>]\n1**2>>8**2000"));
+
+    }
+
 }

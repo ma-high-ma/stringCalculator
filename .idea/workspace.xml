@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5db47b33-f79a-434a-8c30-4cf40c712a88" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StringCalculator.java" afterPath="$PROJECT_DIR$/src/StringCalculator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StringCalculatorTest.java" afterPath="$PROJECT_DIR$/src/StringCalculatorTest.java" />
     </list>
@@ -26,21 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="StringCalculator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StringCalculator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/StringCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+            <state relative-caret-position="437">
+              <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringCalculatorTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StringCalculatorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StringCalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="110" column="24" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
+            <state relative-caret-position="1935">
+              <caret line="129" column="23" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,8 +68,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/StringCalculator.java" />
         <option value="$PROJECT_DIR$/src/StringCalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/StringCalculator.java" />
       </list>
     </option>
   </component>
@@ -400,15 +399,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StringCalculatorTest - 2021.08.07 at 04h 11m 06s.xml">
-      <configuration name="StringCalculatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StringCalculatorTest - 2021.08.07 at 04h 11m 29s.xml">
-      <configuration name="StringCalculatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StringCalculatorTest - 2021.08.07 at 04h 12m 47s.xml">
-      <configuration name="StringCalculatorTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StringCalculatorTest - 2021.08.07 at 04h 13m 43s.xml">
       <configuration name="StringCalculatorTest" configurationId="JUnit" />
     </history-entry>
@@ -428,6 +418,15 @@
       <configuration name="StringCalculatorTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StringCalculatorTest - 2021.08.07 at 04h 34m 45s.xml">
+      <configuration name="StringCalculatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringCalculatorTest - 2021.08.07 at 04h 40m 42s.xml">
+      <configuration name="StringCalculatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringCalculatorTest - 2021.08.07 at 04h 41m 03s.xml">
+      <configuration name="StringCalculatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StringCalculatorTest - 2021.08.07 at 04h 44m 16s.xml">
       <configuration name="StringCalculatorTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -471,21 +470,21 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/StringCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/StringCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="110" column="24" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
+        <state relative-caret-position="1935">
+          <caret line="129" column="23" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StringCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="64" column="56" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
