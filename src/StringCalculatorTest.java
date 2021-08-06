@@ -43,4 +43,12 @@ public class StringCalculatorTest {
 
     }
 
+    @Test
+    public void moreThanTwoNumbers() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        assertEquals(15,s.Add("1,2,3,4,5"));
+
+    }
+
 }
