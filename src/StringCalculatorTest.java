@@ -51,4 +51,13 @@ public class StringCalculatorTest {
 
     }
 
+    @Test
+    public void newLinesBetweenNumbers() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        assertEquals(10,s.Add("1 \n2, 3 \n4"));
+
+    }
+    
+
 }
