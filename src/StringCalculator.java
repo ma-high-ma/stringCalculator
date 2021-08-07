@@ -10,7 +10,7 @@ public class StringCalculator {
         if (numbers.length() > 0) {
 
             //Delimiter specified by user -> Regex modified accordingly [\\W]
-            if (numbers.charAt(0) == '/' && numbers.charAt(1) == '/') {
+            if (numbers.length() >= 2 && numbers.charAt(0) == '/' && numbers.charAt(1) == '/') {
 
                 //Delimiter list ends with "\n"
                 String[] splitNumbers = numbers.split("\\n",2);
@@ -24,7 +24,12 @@ public class StringCalculator {
                     }
 
                 }
-                regex = regex.substring(0,regex.length()-1);
+                try {
+                    regex = regex.substring(0, regex.length() - 1);
+                }
+                catch (Exception e) {
+                    throw new Exception("Delimiter not specified after double slash");
+                }
                 return computeSum(splitNumbers[1], regex);
 
             }
@@ -45,6 +50,7 @@ public class StringCalculator {
 
         int integer, flag = 0;
         String negatives = "";
+
         String[] splitNumbers = str.split(delimiter);
         int sum = 0;
         for (String a : splitNumbers) {
@@ -53,7 +59,14 @@ public class StringCalculator {
             if(a.isEmpty()){
                 continue;
             }
-            integer = Integer.parseInt(a.trim());
+            try {
+                integer = Integer.parseInt(a.trim());
+
+            }
+            //Integer cannot be parsed since Invalid Delimiter
+            catch (Exception e) {
+                throw new Exception("Invalid Input");
+            }
 
             //Negative Integers
             if (integer < 0) {

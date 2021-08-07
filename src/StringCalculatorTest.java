@@ -36,7 +36,7 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void numberWithComma() throws Exception {
+    public void numberWithTrailingComma() throws Exception {
 
         StringCalculator s = new StringCalculator();
         assertEquals(4,s.Add("4,"));
@@ -128,6 +128,58 @@ public class StringCalculatorTest {
 
         StringCalculator s = new StringCalculator();
         assertEquals(11,s.Add("//[**][>>]\n1**2>>8**2000"));
+
+    }
+
+    @Test
+    public void inputWithDelimiterNoNumbers() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        assertEquals(0,s.Add("//[*+**]\n"));
+
+    }
+
+    @Test
+    public void inputWithIncorrectDelimiters() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        try {
+            s.Add("//;\n1*2,3");
+            assert false;
+        } catch (Exception e) {
+
+            assertEquals("Invalid Input",e.getMessage());
+
+
+        }
+    }
+
+    @Test
+    public void delimiterNotSpecifiedAfterDoubleSlash() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        try {
+            s.Add("//\n1,2,3");
+            assert false;
+        }
+        catch(Exception e) {
+            assertEquals("Delimiter not specified after double slash", e.getMessage());
+        }
+
+    }
+
+    @Test
+    public void inputSTartingWithSingleSlash() throws Exception {
+
+        StringCalculator s = new StringCalculator();
+        try {
+            s.Add("/1,2,3");
+            assert false;
+        }
+        catch (Exception e){
+            assertEquals("Invalid Input",e.getMessage());
+
+        }
 
     }
 
