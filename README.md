@@ -2,4 +2,4 @@
 Incubyte
 
 
-This TDD Kta was followed: https://osherove.com/tdd-kata-1
+This TDD Kata was followed: https://osherove.com/tdd-kata-1
